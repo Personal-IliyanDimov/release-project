@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.7.4'
 	id 'io.spring.dependency-management' version '1.0.14.RELEASE'
 	id 'java'
+	id 'net.researchgate.release' version '3.0.2'
 }
 
 group = 'org.imd'
@@ -10,10 +11,6 @@ sourceCompatibility = '17'
 
 repositories {
 	mavenCentral()
-}
-
-plugins {
-	id 'net.researchgate.release' version '3.0.2'
 }
 
 dependencies {
@@ -27,13 +24,13 @@ tasks.named('test') {
 
 tasks.register('customBeforeRelease') {
 	doLast {
-		println '\r\n Custom before release !'
+		println 'Custom before release !'
 	}
 }
 
 tasks.register('customAfterRelease') {
 	doLast {
-		println '\r\n Custom afters release !'
+		println 'Custom afters release !'
 	}
 }
 
@@ -58,9 +55,9 @@ release {
 	snapshotSuffix = '-SNAPSHOT'
 	buildTasks = []
 	ignoredSnapshotDependencies = []
-	versionPatterns = [
-			/(\d+)([^\d]*$)/: { Matcher m, Project p -> m.replaceAll("${(m[0][1] as int) + 1}${m[0][2]}") }
-	]
+//	versionPatterns = [
+//			/(\d+)([^\d]*$)/: { Matcher m, Project p -> m.replaceAll("${(m[0][1] as int) + 1}${m[0][2]}") }
+//	]
 	pushReleaseVersionBranch = null
 	scmAdapters = [
 			net.researchgate.release.GitAdapter,
