@@ -60,10 +60,7 @@ release {
 //	]
 	pushReleaseVersionBranch = null
 	scmAdapters = [
-			net.researchgate.release.GitAdapter,
-			net.researchgate.release.SvnAdapter,
-			net.researchgate.release.HgAdapter,
-			net.researchgate.release.BzrAdapter
+			net.researchgate.release.GitAdapter
 	]
 
 	git {
