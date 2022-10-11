@@ -23,3 +23,12 @@ defined using the properties ***release.releaseVersion*** and ***release.newVers
 - MD file syntax:
 > https://www.markdownguide.org/basic-syntax/
 
+- Remove tags:
+> git push --delete origin <tag e.g 0.0.1>
+
+- List tags:
+> git tag 
+
+- List remote tags:
+> git ls-remote --tags origin
+
