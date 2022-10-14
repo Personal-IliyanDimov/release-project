@@ -46,7 +46,8 @@ which are now considered best practices for modern continuous software developme
 
 Gitflow also can be challenging to use with CI/CD. This post details Gitflow for historical purposes.
 
-### The overall flow of Gitflow is:
+### The overall flow of Gitflow 
+Rules: 
 1. A ***develop*** branch is created from ***main*** 
 2. A ***release*** branch is created from ***develop*** 
 3. ***feature*** branches are created from ***develop*** 
@@ -55,7 +56,13 @@ Gitflow also can be challenging to use with CI/CD. This post details Gitflow for
 6. If an issue in ***main*** is detected a ***hotfix*** branch is created from ***main***    
 7. Once the ***hotfix*** is complete it is merged to both ***develop*** and ***main***
 
-## Rules to follow for Thrunk based strategies 
+Additional rules:
+- If and only if ***feature*** branch is created from ***develop*** it should be merged back to it (affects rule 3 and 4)
+- ***develop*** branch is used for active development of one and only one latest version (affects rule 5)
+- if multiple releases (release-1.0, release-2.0) are developed in parallel then features are created from corresponding branch (affects rule 3)
+- ***hotfix*** might be merged to ***release*** branches if it affects them (affects rule 7)
+
+## Rules to follow for Trunk based strategies 
 
 Looks like bullshit to me. 
 
