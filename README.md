@@ -33,6 +33,37 @@ you can tell the plugin to automatically set and update the version number.
 >> gradle release -Prelease.useAutomaticVersion=true
 
 
+## Rules to follow for Gitflow 
+
+
+Gitflow Workflow
+
+Gitflow is a legacy Git workflow that was originally a disruptive 
+and novel strategy for managing Git branches. 
+
+Gitflow has fallen in popularity in favor of trunk-based workflows, 
+which are now considered best practices for modern continuous software development and DevOps practices. 
+
+Gitflow also can be challenging to use with CI/CD. This post details Gitflow for historical purposes.
+
+### The overall flow of Gitflow is:
+1. A ***develop*** branch is created from ***main*** 
+2. A ***release*** branch is created from ***develop*** 
+3. ***feature*** branches are created from ***develop*** 
+4. When a ***feature*** is complete it is merged into the ***develop*** branch 
+5. When the ***release*** branch is done it is merged into ***develop*** and ***main*** 
+6. If an issue in ***main*** is detected a ***hotfix*** branch is created from ***main***    
+7. Once the ***hotfix*** is complete it is merged to both ***develop*** and ***main***
+
+## Rules to follow for Thrunk based strategies 
+
+Looks like bullshit to me. 
+
+Might be used only by teams that are build from developers with very big experience 
+(at least senior with 5-7 years experience).
+
+
+
 ## Useful links 
 
 - How to write tasks with gradle:
@@ -40,6 +71,14 @@ you can tell the plugin to automatically set and update the version number.
 
 - MD file syntax:
 > https://www.markdownguide.org/basic-syntax/
+
+- Gitflow:
+> https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+
+- Trunk based development
+> https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development
+
+## Commands 
 
 - Remove tags:
 > git push --delete origin <tag e.g 0.0.1>
