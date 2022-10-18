@@ -52,7 +52,7 @@ Rules:
 2. A ***release*** branch is created from ***develop*** 
 3. ***feature*** branches are created from ***develop*** 
 4. When a ***feature*** is complete it is merged into the ***develop*** branch 
-5. When the ***release*** branch is done it is merged into ***develop*** and ***main*** 
+5. When the ***release*** branch is done it is merged into ***tag*** 
 6. If an issue in ***main*** is detected a ***hotfix*** branch is created from ***main***    
 7. Once the ***hotfix*** is complete it is merged to both ***develop*** and ***main***
 
@@ -95,4 +95,28 @@ Might be used only by teams that are build from developers with very big experie
 
 - List remote tags:
 > git ls-remote --tags origin
+
+- Check tags associate with branches
+> ubuntu@ubuntu2004:~/GitHub/release-project$ git tag
+>> 0.0.1,
+>> 0.0.2,
+>> 0.0.3,
+>> 1.0.0,
+>> 1.1.0,
+>> 1.1.1,
+>> 1.1.2,
+>> 1.1.3,
+>> 1.1.4
+> 
+> ubuntu@ubuntu2004:~/GitHub/release-project$ git branch --contains 1.1.4
+>> release-v1
+> 
+> ubuntu@ubuntu2004:~/GitHub/release-project$ git branch --contains 1.1.3
+>> release-v1
+> 
+> ubuntu@ubuntu2004:~/GitHub/release-project$ git branch --contains 0.0.1
+> 
+> develop,
+> main,
+> release-v1
 
