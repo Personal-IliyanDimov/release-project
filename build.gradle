@@ -63,7 +63,7 @@ release {
 	]
 
 	git {
-		requireBranch.set('main')
+		requireBranch.set('release-v1')
 		pushToRemote.set('origin')
 		pushToBranchPrefix.set('')
 		commitVersionFileOnly.set(false)
