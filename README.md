@@ -52,7 +52,7 @@ Rules:
 2. A ***release*** branch is created from ***develop*** 
 3. ***feature*** branches are created from ***develop*** 
 4. When a ***feature*** is complete it is merged into the ***develop*** branch 
-5. When the ***release*** branch is done it is merged into ***tag*** 
+5. When the ***release*** branch is done it is merged into ***develop*** and ***main*** 
 6. If an issue in ***main*** is detected a ***hotfix*** branch is created from ***main***    
 7. Once the ***hotfix*** is complete it is merged to both ***develop*** and ***main***
 
