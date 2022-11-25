@@ -63,7 +63,7 @@ release {
 	]
 
 	git {
-		requireBranch.set('develop')
+		requireBranch.set('main')
 		pushToRemote.set('origin')
 		pushToBranchPrefix.set('')
 		commitVersionFileOnly.set(false)
