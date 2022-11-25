@@ -96,3 +96,27 @@ Might be used only by teams that are build from developers with very big experie
 - List remote tags:
 > git ls-remote --tags origin
 
+- Check tags associate with branches
+> ubuntu@ubuntu2004:~/GitHub/release-project$ git tag
+>> 0.0.1,
+>> 0.0.2,
+>> 0.0.3,
+>> 1.0.0,
+>> 1.1.0,
+>> 1.1.1,
+>> 1.1.2,
+>> 1.1.3,
+>> 1.1.4
+> 
+> ubuntu@ubuntu2004:~/GitHub/release-project$ git branch --contains 1.1.4
+>> release-v1
+> 
+> ubuntu@ubuntu2004:~/GitHub/release-project$ git branch --contains 1.1.3
+>> release-v1
+> 
+> ubuntu@ubuntu2004:~/GitHub/release-project$ git branch --contains 0.0.1
+> 
+> develop,
+> main,
+> release-v1
+
